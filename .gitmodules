@@ -1,0 +1,6 @@
+[submodule "lib/google-closure"]
+	path = lib/google-closure
+	url = git://github.com/jarib/google-closure-library.git
+[submodule "lib/wtk"]
+	path = lib/wtk
+	url = git://github.com/robap/wtk.git
