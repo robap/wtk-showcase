@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<project name="Widget Toolkit Showcase" default="usage">
+  
+  <property name="base_dir" location="." />
+  <property name="src_dir" location="${base_dir}/app" />
+  <property name="closure_lib_dir" location="${base_dir}/lib/google-closure/closure" />
+  <property name="wtk_lib_dir" location="${base_dir}/lib/wtk/src" />
+  <property name="jar_dir" location="${base_dir}/jar" />
+  <property name="build_dir" location="${base_dir}/build" />
+  
+  <target name="build-deps" description="calculate and build dependancies">
+    <exec executable="python" failonerror="true" logError="true" output="${build_dir}/deps.js">
+      <arg value="${closure_lib_dir}/bin/calcdeps.py" />
+      <arg line='-p "${closure_lib_dir}"' />
+      <arg line='-p "${wtk_lib_dir}"' />
+      <arg line='-p "${src_dir}"' />
+      <arg line="-o deps" />
+    </exec>
+  </target>
+  
+  <target name="compile" description="Compile the showcase app">
+    <exec executable="python" failonerror="true" logError="true" output="${build_dir}/showcase-compiled.js">
+      <arg value="${closure_lib_dir}/bin/calcdeps.py" />
+      <arg line='-p "${closure_lib_dir}"' />
+      <arg line='-p "${wtk_lib_dir}"' />
+      <arg line='-p "${src_dir}"' />
+      <arg line='-i "${base_dir}/app/showcase.js"' />
+      <arg line='-f "--compilation_level=ADVANCED_OPTIMIZATIONS"' />
+      <arg line='-c "${jar_dir}/compiler.jar"' />
+      <arg line="-o compiled" />
+    </exec>
+  </target>
+  
+  <target name="usage" description="Usage">
+    <java classname="org.apache.tools.ant.Main">
+      <arg value="-projecthelp" />
+    </java>
+  </target>
+</project>
