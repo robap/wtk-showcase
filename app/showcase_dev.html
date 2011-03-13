@@ -16,10 +16,11 @@
 <!doctype html>
 <html>
   <head>
-    <title>Dialog Demo</title>
+    <title>WTK Showcase Demo</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link href="http://yui.yahooapis.com/2.8.2r1/build/reset/reset-min.css" rel="stylesheet" type="text/css">
     <link href="http://yui.yahooapis.com/2.8.2r1/build/base/base-min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssfonts/fonts-min.css">
     <link href="showcase.css" rel="stylesheet" type="text/css">
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.8/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css">
     <script src="../lib/google-closure/closure/goog/base.js"></script>
@@ -29,17 +30,52 @@
   <body>
     <div id="container">
       <div id="switcher"></div>
-      <button id="show_dialog" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
-        <span class="ui-button-text">Show Dialog</span>
-      </button>
-      <button id="close_dialog" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
-        <span class="ui-button-text">Close Dialog</span>
-      </button>
+      
+      <div class="app">
+        <div id="menubar"></div>
+        <div class="app_form">
+          <div id="buttons" class="app_buttons"></div>
+          <div class="app_fields">
+            <div class="app_fields_left">
+              <label for="firstName">First Name:</label>
+              <input type="text" id="firstName" />
+            </div>
+            
+            <div class="app_fields_right">
+              <label for="lastName">Last Name:</label>
+              <input type="text" id="lastName" />
+            </div>
+          </div>
+          <div class="app_fields">
+            <div class="app_fields_left">
+              <label for="address">Address:</label>
+              <input type="text" id="address" />
+            </div>
+            
+            <div class="app_fields_right">
+              <label for="city">City:</label>
+              <input type="text" id="city" />
+            </div>
+          </div>
+          <div class="app_fields">
+            <div class="app_fields_left">
+              <label for="state">State:</label>
+              <input type="text" id="state" />
+            </div>
+            
+            <div class="app_fields_right">
+              <label for="zip">Postal Code:</label>
+              <input type="text" id="zip" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     
     <script>
       var showcase = new showcase({
-        containerId : 'container'
+        menubarId : 'menubar',
+        controlButtonsId: 'buttons'
       });
     </script>
   </body>

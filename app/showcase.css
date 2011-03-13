@@ -13,3 +13,46 @@ body {
   right: 2px;
 }
 
+.app {
+  margin-top: 20px;
+  width: 625px;
+}
+
+.app_form {
+  height: 300px;
+  border-bottom: 1px solid #c6c6c6;
+  border-right: 1px solid #c6c6c6;
+  border-left: 1px solid #c6c6c6;
+  padding: 1.2em;
+}
+
+.app_buttons {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px dashed #c6c6c6;
+  text-align: right;
+}
+
+.app_form label {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.app_form input {
+  width: 160px;
+}
+
+.app_fields div {
+  float: left;
+  margin-bottom: 4px;
+}
+
+.app_fields div.app_fields_left {
+  width: 260px;
+  text-align: right;
+}
+
+.app_fields div.app_fields_right {
+  width: 300px;
+  text-align: right;
+}
