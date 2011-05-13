@@ -1,77 +1,125 @@
+<!--
+// Copyright 2011 Robert Apodaca. All Rights Reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS-IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+-->
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset='utf-8'>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>robap/wtk-showcase @ GitHub</title>
+    <link href="http://yui.yahooapis.com/2.8.2r1/build/reset/reset-min.css" rel="stylesheet" type="text/css">
+    <link href="http://yui.yahooapis.com/2.8.2r1/build/base/base-min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssfonts/fonts-min.css">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/showcase.css" rel="stylesheet" type="text/css">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.8/themes/ui-darkness/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="js/showcase-compiled.js"></script>
+  </head>
 
-  <title>robap/wtk-showcase @ GitHub</title>
+  <body>
+    <a href="http://github.com/robap/wtk-showcase"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
 
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #151828;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #ffffff;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #eae7d7; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #eae7d7; }
-    h3 { text-align: center; color: #eae7d7; }
-    a { color: #eae7d7; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
-</head>
+    <div id="container">
 
-<body>
-  <a href="http://github.com/robap/wtk-showcase"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+      <div class="download">
+        <a href="http://github.com/robap/wtk-showcase/zipball/master">
+          <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
+        <a href="http://github.com/robap/wtk-showcase/tarball/master">
+          <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
+      </div>
 
-  <div id="container">
+      <h1><a href="http://github.com/robap/wtk-showcase">wtk-showcase</a>
+        <span class="small">by <a href="http://github.com/robap">robap</a></span></h1>
 
-    <div class="download">
-      <a href="http://github.com/robap/wtk-showcase/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/robap/wtk-showcase/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
-    </div>
+      <div class="showcase">
+        <div id="switcher"></div>
+        <div class="app">
+          <div id="menubar"></div>
+          <div class="app_form">
+            <div id="buttons" class="app_buttons"></div>
+            <div class="app_fields">
+              <div class="app_fields_left">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" />
+              </div>
 
-    <h1><a href="http://github.com/robap/wtk-showcase">wtk-showcase</a>
-      <span class="small">by <a href="http://github.com/robap">robap</a></span></h1>
+              <div class="app_fields_right">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" />
+              </div>
+            </div>
+            <div class="app_fields">
+              <div class="app_fields_left">
+                <label for="address">Address:</label>
+                <input type="text" id="address" />
+              </div>
 
-    <div class="description">
-      Showcase of all widgets in wtk
-    </div>
+              <div class="app_fields_right">
+                <label for="city">City:</label>
+                <input type="text" id="city" />
+              </div>
+            </div>
+            <div class="app_fields">
+              <div class="app_fields_left">
+                <label for="state">State:</label>
+                <input type="text" id="state" />
+              </div>
 
-    <h2>Authors</h2>
-<p>Rob Apodaca (rob.apodaca@gmail.com)<br/><br/>      </p>
-<h2>Contact</h2>
-<p>Rob Apodaca (rob.apodaca@gmail.com)<br/>      </p>
+              <div class="app_fields_right">
+                <label for="zip">Postal Code:</label>
+                <input type="text" id="zip" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>
+          This widget toolkit is for developers who use google closure and
+          want the ability to style their ui widgets using jquery-ui css. This
+          is not simply a google closure wrapper around jquery-ui. This is a
+          separate ui widget library which takes advantage of jquery-ui css
+          so that themes can be easily switched. You can try changing the theme
+          for this demo by changing the select box in the upper right corner 
+          of this page.
+        </p>
+        <h2>Authors</h2>
+        <p>
+          Rob Apodaca (rob.apodaca@gmail.com)
+        </p>
+        <h2>Contact</h2>
+        <p>
+          Rob Apodaca (rob.apodaca@gmail.com)
+        </p>
+        <h2>Download</h2>
+        <p>
+          You can download this project in either
+          <a href="http://github.com/robap/wtk-showcase/zipball/master">zip</a> or
+          <a href="http://github.com/robap/wtk-showcase/tarball/master">tar</a> formats.
+        
+          You can also clone the project with <a href="http://git-scm.com">Git</a>
+          by running:
+          <pre>$ git clone git://github.com/robap/wtk-showcase</pre>
+        </p>
 
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="http://github.com/robap/wtk-showcase/zipball/master">zip</a> or
-      <a href="http://github.com/robap/wtk-showcase/tarball/master">tar</a> formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/robap/wtk-showcase</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/robap/wtk-showcase">robap/wtk-showcase</a>
-    </div>
-
-  </div>
-
-  
-</body>
+        <div class="footer">
+          get the source code on GitHub : <a href="http://github.com/robap/wtk-showcase">robap/wtk-showcase</a>
+        </div>
+      </div>
+  <script>
+    var sc = new showcase({
+      menubarId : 'menubar',
+      controlButtonsId: 'buttons'
+    });
+  </script>
+  </body>
 </html>
